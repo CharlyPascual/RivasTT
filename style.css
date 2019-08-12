@@ -1,0 +1,184 @@
+/* ********** Custom Properties ********** */
+:root {
+    --main-font: 'Raleway';
+    --alternate-font: sans-serif;
+    --font-size: 16px;
+    --line-height: 1.6;
+  
+    --main-color: #0096D9;
+    --main-modal-color: rgba(0, 150, 217, .75);
+    --second-color: #171226;
+    --second-modal-color: rgba(23, 18, 38, .75);
+  
+    --bg-color: #FFF;
+    --bg-modal-color: rgba(0, 0, 0, .5);
+    --bg-alternate-color: #F3F3F3;
+    --border-color: #DDD;
+  
+    --text-color: #333;
+    --title-color: var(--second-color);
+  
+    --link-color: var(--main-color);
+    --link-hover-color: var(--second-color);
+  
+    --max-width: 1200px;
+    --header-height: 5rem;
+  
+    --logo-width: 4rem;
+    --logo-height: 4rem;
+    --logo-spacing: .4rem;
+  
+    --nav-height: 64px;
+  }
+  
+  /* ********** Reset Styles ********** */
+  html {
+    font-family: var(--main-font), var(--alternate-font);
+    font-size: var(--font-size);
+    line-height:  var(--line-height);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+  }
+  
+  body {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: inherit;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: all .3s ease-out;
+  }
+  
+  a:hover { color: var(--link-hover-color); }
+  
+  ::selection {
+    background-color: var(--main-color);
+    color: var(--second-color);
+  }
+
+  /* ********** Bootstrap Styles ********** */
+  .navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  .navbar-dark .navbar-toggler-icon:hover {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 150, 217, .75)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    transition: all .5s ease;
+  }
+
+  .nav-item:hover{
+      background-color: var(--main-modal-color) !important;
+      transition: all .5s ease;
+  }
+  /*o pones las propiedades completa tal como estan en BT o tneemos que poner !important*/
+  .navbar-dark .navbar-nav .nav-link  {
+      color: var(--main-color);
+      font-size: 1.15rem;
+      font-weight: bold;
+      transition: all .5s ease;
+
+  }
+
+  /*icono del titulo*/
+  .navbar-brand img {
+    width: auto;
+    height: var(--logo-height);
+    padding: var(--logo-spacing);
+  }
+ /*icono del titulo redondear+*/
+  .rounded {
+    border-radius: 2.5rem !important;
+  }
+
+  /* ********** My Styles ********** */
+  .Footer{
+    background-color: var(--bg-alternate-color);
+  }
+  /* responsive de los iconos sociales */
+  .u-flowText { font-size: 1.25rem; }
+
+  /* un unico imagen para todas la paginas, se configura directamente en html con la propiedad style */
+  .HeroImage{
+    width: 100%;
+    min-height: 100vh;
+    background-image: var(--bg-url);
+    background-attachment: var(--bg-attach);
+    background-size: var(--bg-size);
+    background-position-x: var(--bg-x);
+    background-position-y: var(--bg-y);
+
+  }
+
+  .HeroImage > div{
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-modal-color);
+  }
+
+  .HeroImage h2{
+    padding: 0 1rem;
+    text-align: center;
+    font-family: 'Raleway';
+    font-weight: bold;
+    /* texto responsible */
+    font-size: 5vw; 
+    color: var(--bg-color);
+  }
+
+  .HeroImage span{
+    display: block;
+  }
+
+  /* Contenido columnas*/
+  .Main h3{
+    text-align: center;
+    margin-top: 4rem;
+  }
+  .Main p{
+    margin: 1.5rem;
+  }
+
+  .img-fluid-svg{
+    max-width: 50%;
+    height: auto;
+    display: block;
+  }
+  .img-fluid-svg-table{
+    max-width: 89%;
+    height: auto;
+    display: block;
+  }
+  
+  }
+
+  /* ********** Media Queries Small ********** */
+@media (min-width: 576px) {
+
+}
+
+/* ********** Media Queries Medium ********** */
+@media (min-width: 768px) {
+  .u-flowText { font-size: 1.5rem; }
+}
+
+/* ********** Media Queries Large ********** */
+@media (min-width: 992px) {
+  .nav-item:hover {
+    background-color: transparent;
+  }
+
+  .u-flowText { font-size: 1.75rem; }
+}
+
+/* ********** Media Queries ExtraLarge ********** */
+@media (min-width: 1200px) {
+
+}
